@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TheHiker</title>
+	<style type="text/css">
+		body {background-color: #b3e0ff}
+		h1 {color: #000080; font-family: Monotype Corsiva; 
+			font-size: 72px; text-align: center;
+			margin: 50px 0px 0px 0px;
+		}
+
+		p {color: #0B086F; text-align: center; 
+			font-size: 22px; font-family: Bell MT;
+			margin: 0px 0px 0px 0px;
+		}
+
+		#nav {background-color: #343539;
+				margin-top: 50px; margin-left: 8%; margin-right: 8%; text-align: center;
+		}
+
+		#nav ul{
+				list-style: none;
+		}
+
+		#nav ul li{display: inline;}
+
+		#nav ul li a{color: white;
+    				text-decoration: none; font-size: 20px; 
+    				padding:  10px 40px 10px 40px;
+    				margin-right: 20px; margin-left: 20px;
+    				display: inline-block;
+		}
+
+		#nav ul li a:hover {
+			background-color: green;
+			border-radius: 5px;
+		}
+
+		.Slides {margin-left: 15%; margin-top: 3%;}
+
+		.quote{color: black; text-align: center; 
+			  margin-top: 80px; margin-left: 15%; 
+			  margin-right: 15%; font-family: Times New Roman;}
+
+		.name{color: black; font-size: 16px; 
+			text-align: center; font-family: Arial;
+			margin-top: 10px;}
+
+	</style>
+
+	
+<body>
+	<header>
+		<div id="logo">
+			 <h1>The Hiker</h1>
+			 <p>Hike more... Worry less...</p>
+		</div>
+	</header>
+
+	<div id="nav">
+			<ul>
+				<li><a href="HomePage.html">Home</a></li>
+				<li><a href="Hikes.html">Hikes</a></li>
+				<li><a href="Skills.html">Skills</a></li>
+				<li><a href="Gear.html">Gear</a></li>
+				<li><a href="Health.html">Health and Safety</a></li>
+			</ul>
+	</div>
+
+	<div class="Slides">
+			<img class="mySlides" src="1.jpg" style="width: 80%; height: 500px;">
+		    <img class="mySlides" src="2.jpg" style="width: 80%; height: 500px;">
+		    <img class="mySlides" src="3.jpg" style="width: 80%; height: 500px;">
+		    <img class="mySlides" src="4.jpg" style="width: 80%; height: 500px;">
+	</div>
+
+	<script>
+		var myIndex = 0;
+		carousel();
+
+		function carousel() {
+		    var i;
+		    var x = document.getElementsByClassName("mySlides");
+		    for (i = 0; i < x.length; i++) {
+		       x[i].style.display = "none";  
+		    }
+		    myIndex++;
+		    if (myIndex > x.length) {myIndex = 1}    
+		    x[myIndex-1].style.display = "block";  
+		    setTimeout(carousel, 3000);
+		}
+	</script>
+
+	<div id="quotes">
+		
+		<p class="quote">"Jumping from boulder to boulder and never falling, with a heavy pack, is easier than it sounds; you just can't fall when you get into the rhythm of the dance."</p>
+		<p class="name"><i>Jack Kerouac</i></p>
+		
+		<p class="quote">"Hiking and happiness go hand in hand or foot in boot."</p>
+		<p class="name"><i>Diane Spicer</i></p>
+
+		<p class="quote">"Getting to the top is optional. Getting down is mandatory."</p>
+		<p class="name"><i>Ed Viesturs</i></p>
+
+		<p class="quote">"Walk away quietly in any direction and taste the freedom of the mountaineer. Camp out among the grasses and gentians of glacial meadows, in craggy garden nooks full of nature’s darlings."</p>
+		<p class="name"><i>John Muir</i></p>
+
+		<p class="quote">"In every walk with nature, one receives far more than he seeks."</p>
+		<p class="name"><i>John Muir</i></p>
+	</div>
+
+</body>
+</html>
